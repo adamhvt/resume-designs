@@ -1,0 +1,207 @@
+// CSS resets
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+// End of CSS resets
+
+* {
+  font-family: "Calibri", sans-serif;
+}
+
+body {
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #666 50%,
+    #444,
+    #222
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #666 50%,
+    #444,
+    #222
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+i.bx {
+  vertical-align: middle;
+}
+
+.text-secondary {
+  opacity: 0.7;
+}
+
+.resume-container {
+  width: 100%;
+  height: 100%;
+}
+
+.layout-container {
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.sidebar-container {
+  flex: 1 0 auto;
+  max-width: 30%;
+  margin: 3rem 4rem 3rem 0;
+  padding: 2rem 2rem;
+  border-radius: 0.5rem;
+  background: #fff;
+
+  .name {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 3rem;
+    text-transform: uppercase;
+  }
+
+  .role {
+    font-size: 1.2rem;
+  }
+}
+
+.details-container {
+  padding: 3rem 0 3rem 2rem;
+  color: #fff;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .contact {
+      ul li {
+        display: flex;
+        align-items: center;
+
+        .contact-icon {
+          margin-right: 0.5rem;
+        }
+      }
+
+      li + li {
+        margin-top: 0.5rem;
+      }
+    }
+
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+
+      .img-frame {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        overflow: hidden;
+        border: 6px solid #fff;
+      }
+    }
+  }
+
+  .introduction {
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #aaa;
+    }
+  }
+
+  .work-experience {
+    .company-details {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .highlights ul {
+      margin: 1rem 0;
+      padding-left: 2rem;
+      list-style: disc;
+
+      li + li {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
+
+.sidebar-section {
+  .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .section-details {
+    ul {
+      li + li {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+.detail-section {
+  padding-right: 2rem;
+
+  .section-title {
+    margin-bottom: 2rem;
+  }
+}
+
+.sidebar-section + .sidebar-section {
+  margin-top: 3rem;
+}
+
+.detail-section + .detail-section {
+  margin-top: 3rem;
+}
+
+.work-experience-section + .work-experience-section {
+  margin-top: 2rem;
+}
+
+.section-details,
+.detail-section,
+.work-experience-description {
+  line-height: 1.4rem;
+}
